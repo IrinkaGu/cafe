@@ -2,7 +2,7 @@ angular
     .module("DroneCafeApp")
     .factory("DishService", function ($resource, config) {
 
-        return $resource(config.apiUrl + '/api/dish/:_id/',
+        return $resource(config.apiUrl + '/dishes/:_id/',
             {
                 _id: '@_id'
             },

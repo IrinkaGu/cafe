@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
            return res.status(500).send(err.message);
         return (data) ?
             res.status(200).json(data) :
-            res.status(404).json('Пользователь не найден');
+            res.status(200).send({error : 'Пользователь не найден'}); 
     });
 });
 

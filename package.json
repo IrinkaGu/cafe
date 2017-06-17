@@ -30,7 +30,7 @@
     "angular-messages": "^1.6.1",
     "angular-resource": "^1.6.1",
     "angular-socket-io": "^0.7.0",
-    "angular-ui-router": "^1.0.0",
+    "@uirouter/angularjs": "^1.0.0",
     "angular-materialize": "^0.2.2",
     "materialize-css": "^0.98.0",
     "body-parser": "^1.16.0",

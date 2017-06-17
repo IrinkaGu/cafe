@@ -2,7 +2,7 @@ angular
     .module("DroneCafeApp")
     .factory("OrderService", function($resource, config){
 
-        return $resource(config.apiUrl + '/api/order/:_id/',
+        return $resource(config.apiUrl + '/orders/:_id/',
             {
                 _id: '@_id'
             },
@@ -12,7 +12,7 @@ angular
                 },
                 deliver: {
                     method: "PUT",
-                    url: config.apiUrl + '/api/order/:_id/deliver'
+                    url: config.apiUrl + '/orders/:_id/deliver'
                 }
             });
     });
