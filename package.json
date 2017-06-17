@@ -1,0 +1,48 @@
+{
+  "name": "cafe",
+  "version": "1.0.0",
+  "description": "В рамках дипломного проект необходимо разработать систему автоматизации ресторана, в котором вместо официантов используются автономные дроны, а заказ размещается через простое веб-приложение.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "install": "npm install",
+    "start": "node index",
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrinkaGu/cafe.git"
+  },
+  "keywords": [
+    "drone-cafe"
+  ],
+  "author": "Ирина <gusai2016@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrinkaGu/cafe/issues"
+  },
+  "homepage": "https://github.com/IrinkaGu/cafe#readme",
+  "dependencies": {
+    "netology-fake-drone-api": "^1.0.1",
+    "angular": "^1.6.1",
+    "angular-messages": "^1.6.1",
+    "angular-resource": "^1.6.1",
+    "angular-socket-io": "^0.7.0",
+    "angular-ui-router": "^1.0.0",
+    "angular-materialize": "^0.2.2",
+    "materialize-css": "^0.98.0",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.7",
+    "ngstorage": "^0.3.11",
+    "socket.io": "^1.7.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "chai": "^4.0.0",
+    "supertest": "^3.0.0"
+  }
+}

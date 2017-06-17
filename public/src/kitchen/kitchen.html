@@ -1,0 +1,38 @@
+<preloader ng-if="$ctrl.loading"></preloader>
+<div class="row" ng-if="!$ctrl.loading">
+    <div class="col s12 m6 l6">
+        <div class="card-panel">
+            <h5>Заказанные блюда</h5>
+            <table class="striped" ng-if="$ctrl.newOrderList.length > 0">
+                <tbody>
+                <tr ng-repeat="order in $ctrl.newOrderList">
+                    <td>
+                        <p class="dish-name">{{order.dish.title}}</p>
+                        <button class="waves-effect waves-light btn" ng-click="$ctrl.startCooking(order, $index)">
+                            Начать готовить
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col s12 m6 l6">
+        <div class="card-panel">
+            <h5>Готовятся</h5>
+            <table class="striped" ng-if="$ctrl.cookingOrderList.length > 0">
+                <tbody>
+                <tr ng-repeat="order in $ctrl.cookingOrderList">
+                    <td>
+                        <p class="dish-name">{{order.dish.title}}</p>
+                        <p><timer start="order.cookingStart"></timer></p>
+                        <button class="waves-effect waves-light btn" ng-click="$ctrl.endCooking(order, $index)">
+                            Готово
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

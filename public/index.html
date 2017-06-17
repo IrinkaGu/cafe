@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="DroneCafeApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Drone Cafe</title>
+    <link rel="stylesheet" href="/scripts/materialize-css/dist/css/materialize.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/scripts/angular/angular.min.js"></script>
+    <script src="/scripts/angular-resource/angular-resource.min.js"></script>
+    <script src="/scripts/angular-messages/angular-messages.min.js"></script>
+    <script src="/scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/scripts/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="/scripts/angular-materialize/src/angular-materialize.min.js"></script>
+    <script src="/scripts/ngstorage/ngStorage.min.js"></script>
+
+    <script src="/scripts/socket.io-client/dist/socket.io.min.js"></script>
+    <script src="/scripts/angular-socket-io/socket.min.js"></script>
+</head>
+<style>
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+</style>
+<body class="purple lighten-5">
+<header class="grey darken-4 purple-text text-accent-4">
+	<div class="row valign-wrapper">
+			<div class="col s2"></div>
+            <div class="col s2">
+				<img src="http://www.thedronefiles.org/wp-content/uploads/2016/05/BLH8675_b0.jpg" alt="" class="responsive-img circle responsive-img">
+			</div>
+			<div class="col s6">
+				<h1 class="header center-on-small-only">Drone cafe</h1>
+			</div>
+    </div>
+</header>
+
+<main class="container">
+    <br/><br/>
+    <ui-view></ui-view>
+    <br/><br/>
+</main>
+
+<footer class="page-footer grey darken-4">
+    <div class="footer-copyright">
+        <div class="container">© Irina Kireeva</div>
+    </div>
+</footer>
+
+<script src="src/app.module.js"></script>
+<script src="src/preloader/preloader.component.js"></script>
+<script src="src/dish/dish-list.component.js"></script>
+<script src="src/client/client-home.component.js"></script>
+<script src="src/kitchen/kitchen.component.js"></script>
+<script src="src/login/login.component.js"></script>
+<script src="src/services/dish.service.js"></script>
+<script src="src/services/user.service.js"></script>
+<script src="src/services/auth.service.js"></script>
+<script src="src/services/order.service.js"></script>
+<script src="src/services/client-socket.service.js"></script>
+<script src="src/services/kitchen-socket.service.js"></script>
+<script src="src/timer/timer.component.js"></script>
+</body>
+</html>
