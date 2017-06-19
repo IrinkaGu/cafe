@@ -1,0 +1,40 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.dishlist .avatar {
+    width: 82px;
+    height: 82px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.dishlist .secondary-content {
+    margin-top: 20px;
+}
+
+.dishlist .secondary-content .badge {
+    margin-right: 10px;
+}
+
+.kitchen .secondary-content {
+    margin-top: -20px;
+}
+
+.status {
+    color: green;
+}
+
+timer {
+    padding: 10px;
+}

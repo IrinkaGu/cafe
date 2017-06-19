@@ -1,6 +1,5 @@
 const express       = require("express");
 const bodyParser    = require("body-parser");
-const api           = require("./server/api");
 const database      = require("./server/db");
 const CONFIG        = require("./server/config");
 const PORT          = process.env.PORT || CONFIG.server.defaultPort;
@@ -10,6 +9,8 @@ database.connect();
 const server = app.listen(PORT, function () {
     console.log('Listening on port ' + PORT)
 });
+let socket = require("./server/socketIO")(server);
+const api  = require("./server/api");
 
 app.use(express.static('./public'));
 app.use('/scripts', express.static('./node_modules/'));

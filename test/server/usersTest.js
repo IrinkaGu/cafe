@@ -12,6 +12,7 @@ describe('Тестирование /users', () => {
         require('../../index');
         setTimeout(() => {
             server = supertest.agent(CONFIG.server.host + ":" + PORT);
+            User.remove({email: user.email}).exec();
             done();
         }, 100);
     });
@@ -58,7 +59,10 @@ describe('Тестирование /users', () => {
 
     it('Тест пользователь не найден', function (done) {
         server
-            .get(URL).expect(404)
+            .get(URL).expect(200)
+            .expect(function(res) {
+                expect(res.body.error).to.be.equal('Пользователь не найден');
+            })
             .end((err, res) => (err) ? done(err) : done());
     });
 

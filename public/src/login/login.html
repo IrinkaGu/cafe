@@ -2,16 +2,16 @@
     <div class="col s12 m6 l6 offset-l3">
         <div class="card-panel">
             <h5>Пожалуйста, авторизуйтесь</h5>
-            <form name="loginForm" novalidate>
+            <form name="loginForm" novalidate class="center-align">
                 <div class="input-field">
-                    <input type="text" ng-model="credentials.name" name="name" required />
+                    <input type="text" ng-model="credentials.name" name="name" required/>
                     <label>Имя</label>
                 </div>
                 <div ng-messages="loginForm.name.$error" ng-if="loginForm.name.$dirty" class="red-text text-darken-4">
                     <div ng-message="required">Обязательное поле<br/><br/></div>
                 </div>
                 <div class="input-field">
-                    <input type="email" ng-model="credentials.email" name="email" required />
+                    <input type="email" ng-model="credentials.email" name="email" required/>
                     <label>Email</label>
                 </div>
                 <div ng-messages="loginForm.email.$error" ng-if="loginForm.email.$dirty"
@@ -20,7 +20,8 @@
                     <div ng-message="required">Обязательное поле<br/><br/></div>
                 </div>
                 <button class="waves-effect waves-light btn login-btn" ng-click="$ctrl.login(credentials)"
-                        type="submit" ng-disabled="loginForm.$invalid">Войти</button>
+                        type="submit" ng-disabled="loginForm.$invalid">Войти
+                </button>
             </form>
         </div>
     </div>

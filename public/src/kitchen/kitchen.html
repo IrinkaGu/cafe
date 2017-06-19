@@ -1,38 +1,32 @@
 <preloader ng-if="$ctrl.loading"></preloader>
-<div class="row" ng-if="!$ctrl.loading">
+<div class="row card-panel kitchen" ng-if="!$ctrl.loading">
     <div class="col s12 m6 l6">
-        <div class="card-panel">
-            <h5>Заказанные блюда</h5>
-            <table class="striped" ng-if="$ctrl.newOrderList.length > 0">
-                <tbody>
-                <tr ng-repeat="order in $ctrl.newOrderList">
-                    <td>
-                        <p class="dish-name">{{order.dish.title}}</p>
-                        <button class="waves-effect waves-light btn" ng-click="$ctrl.startCooking(order, $index)">
-                            Начать готовить
-                        </button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Заказанные блюда<span class="new badge red" data-badge-caption="">({{$ctrl.newOrderList.length}})</span>
+            </h4></li>
+            <li class="collection-item" ng-repeat="order in $ctrl.newOrderList">
+                <span class="title">{{order.dish.title}}</span>
+                <span><br/>Клиент: {{order.user.name}}, {{order.user.email}}</span>
+                <button class="green waves-effect waves-light btn-floating secondary-content"
+                        ng-click="$ctrl.startCooking(order, $index)">
+                    +
+                </button>
+            </li>
+        </ul>
     </div>
     <div class="col s12 m6 l6">
-        <div class="card-panel">
-            <h5>Готовятся</h5>
-            <table class="striped" ng-if="$ctrl.cookingOrderList.length > 0">
-                <tbody>
-                <tr ng-repeat="order in $ctrl.cookingOrderList">
-                    <td>
-                        <p class="dish-name">{{order.dish.title}}</p>
-                        <p><timer start="order.cookingStart"></timer></p>
-                        <button class="waves-effect waves-light btn" ng-click="$ctrl.endCooking(order, $index)">
-                            Готово
-                        </button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Готовятся<span class="new badge" data-badge-caption="">({{$ctrl.cookingOrderList.length}})</span>
+            </h4></li>
+            <li class="collection-item" ng-repeat="order in $ctrl.cookingOrderList">
+                <span class="title">{{order.dish.title}}</span>
+                <span><br/>Клиент: {{order.user.name}}, {{order.user.email}}</span>
+                <button class="red waves-effect waves-light btn-floating secondary-content"
+                        ng-click="$ctrl.endCooking(order, $index)">
+                    Ok
+                </button>
+                <span class="secondary-content"><timer start="order.cookingStart"></timer></span>
+            </li>
+        </ul>
     </div>
 </div>

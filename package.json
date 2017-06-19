@@ -1,29 +1,24 @@
 {
   "name": "cafe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "В рамках дипломного проект необходимо разработать систему автоматизации ресторана, в котором вместо официантов используются автономные дроны, а заказ размещается через простое веб-приложение.",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "install": "npm install",
     "start": "node index",
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "import": "node import"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IrinkaGu/cafe.git"
   },
-  "keywords": [
-    "drone-cafe"
-  ],
+  "keywords": ["drone-cafe"],
   "author": "Ирина <gusai2016@yandex.ru>",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/IrinkaGu/cafe#readme",
   "bugs": {
     "url": "https://github.com/IrinkaGu/cafe/issues"
   },
-  "homepage": "https://github.com/IrinkaGu/cafe#readme",
   "dependencies": {
     "netology-fake-drone-api": "^1.0.1",
     "angular": "^1.6.1",
