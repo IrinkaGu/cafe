@@ -2,19 +2,14 @@
     <div class="col s12 m5 l3">
         <div class="card-panel">
             <h5>{{$ctrl.user.name}}</h5>
-            <p>email: <span class="user-balance">{{$ctrl.user.email}}</span></p>
-            <hr/>
-            <p>Баланс: <span class="user-balance"><span class="new badge blue" data-badge-caption="">{{$ctrl.user.balance | currency}}</span></span>
-            </p>
-            <button class="green waves-effect waves-light btn user-balance-add" ng-click="$ctrl.addMoney()">Пополнить
-            </button>
+            <p>Баланс: <span class="user-balance">{{$ctrl.user.balance | currency}}</span></p>
+            <button class="waves-effect waves-light btn user-balance-add" ng-click="$ctrl.addMoney()">Пополнить</button>
             <br/><br/>
-            <hr/>
-            <button class="red lighten-1 btn user-logout" ng-click="$ctrl.logout()">Выйти</button>
+            <button class="grey lighten-1 btn user-logout" ng-click="$ctrl.logout()">Выйти</button>
         </div>
     </div>
     <div class="col s12 m7 l8 offset-l1">
-        <h5>Ваши блюда<span class="new badge" data-badge-caption="">({{$ctrl.orderList.length}})</span></h5>
+        <h5>Заказанные блюда</h5>
 
         <preloader ng-if="$ctrl.ordersLoading"></preloader>
 
@@ -43,6 +38,6 @@
             </tbody>
         </table>
         <br/><br/>
-        <a ui-sref="dish-list" class="green waves-effect waves-light btn">Добавить</a>
+        <a ui-sref="dish-list" class="waves-effect waves-light btn add-dish-btn">Добавить</a>
     </div>
 </div>
