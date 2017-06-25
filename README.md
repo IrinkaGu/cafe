@@ -1,3 +1,80 @@
+Описание системы:
+
+Cсылка на демо-версию: 
+
+Запуск системы:
+1. Установка модулей: npm install
+2. Загрузка меню: node import
+3. Запуск сервера: node index
+4. В браузере: http://127.0.0.1:3001/
+   Кухня: http://127.0.0.1:3001/#!/kitchen
+
+Архитектура системы:
+|_ public
+	|_ src	
+		|_ client	
+			|_ client.html
+			|_ clientСomponent.js
+		|_ dish	
+			|_ dish.html
+			|_ dishComponent.js
+		|_ kitchen	
+			|_ kitchen.html	
+			|_ kitchenComponent.js
+		|_ login	
+			|_ login.html
+			|_ loginComponent.js
+		|_ preloader
+			|_ preloader.html	
+			|_ preloaderComponent.js
+		|_ services	
+			|_ authService.js
+			|_ clientSocketService.js
+			|_ dishService.js	
+			|_ kitchenSocketService.js	
+			|_ orderService.js	
+			|_ userService.js
+		|_ timer	
+			|_ timerComponent.js
+		|_ app.css
+		|_ app.js	
+	|_ index.html
+|_ server	
+	|_ api	
+		|_ v1	
+			|_ dishes
+				|_ index.js
+			|_ orders
+				|_ index.js
+			|_ users	
+				|_ index.js
+			|_ index.js
+		|_ index.js
+	|_ controllers
+		|_ dishController.js
+		|_ orderController.js
+		|_ userController.js
+	|_ models
+		|_ dish.js
+		|_ order.js
+		|_ user.js
+	|_ config.js
+	|_ db.js	
+	|_ socketIO.js
+|_ test/server	
+	|_ server
+		|_ dishesTest.js
+		|_ ordersTest.js
+		|_ usersTest.js
+|_ .gitignore	
+|_ README.md
+|_ import.js
+|_ index.js	
+|_ menu.json	
+|_ package.json
+
+
+Задание:
 # Drone cafe
 
 В рамках дипломного проект необходимо разработать систему автоматизации ресторана, в котором вместо официантов используются автономные дроны, а заказ размещается через простое веб-приложение.
