@@ -3,8 +3,7 @@
         <div class="card-panel">
             <h5>{{$ctrl.user.name}}</h5>
             <p>Баланс: <span class="user-balance">{{$ctrl.user.balance | currency}}</span></p>
-            <button class="waves-effect waves-light btn user-balance-add" ng-click="$ctrl.addMoney()">Пополнить</button>
-            <br/><br/>
+            <button class="waves-effect waves-light btn user-balance-add" ng-click="$ctrl.addMoney()" style="margin:10px 0;">Пополнить</button>
             <button class="grey lighten-1 btn user-logout" ng-click="$ctrl.logout()">Выйти</button>
         </div>
     </div>
@@ -37,7 +36,6 @@
             </tr>
             </tbody>
         </table>
-        <br/><br/>
-        <a ui-sref="dish-list" class="waves-effect waves-light btn add-dish-btn">Добавить</a>
+        <a ui-sref="dish-list" class="waves-effect waves-light btn add-dish-btn" style="margin: 10px 0;">Добавить</a>
     </div>
 </div>

@@ -8,7 +8,7 @@
                     <label>Имя</label>
                 </div>
                 <div ng-messages="loginForm.name.$error" ng-if="loginForm.name.$dirty" class="red-text text-darken-4">
-                    <div ng-message="required">Обязательное поле<br/><br/></div>
+                    <div ng-message="required">Обязательное поле</div>
                 </div>
                 <div class="input-field">
                     <input type="email" ng-model="credentials.email" name="email" required/>
@@ -16,8 +16,8 @@
                 </div>
                 <div ng-messages="loginForm.email.$error" ng-if="loginForm.email.$dirty"
                      class="red-text text-darken-4 email-error">
-                    <div ng-message="email">Неверно заполнено<br/><br/></div>
-                    <div ng-message="required">Обязательное поле<br/><br/></div>
+                    <div ng-message="email">Неверно заполнено</div>
+                    <div ng-message="required">Обязательное поле</div>
                 </div>
                 <button class="waves-effect waves-light btn login-btn" ng-click="$ctrl.login(credentials)"
                         type="submit" ng-disabled="loginForm.$invalid">Войти
